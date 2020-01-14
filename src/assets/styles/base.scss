@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--bg-alt-color);
+	transition: background-color, color 0.5s;
+	text-align: center;
+}
+
+main {
+	block-size: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y proximity;
+	scrollbar-width: none;
+}
+
+main::-webkit-scrollbar,
+.grid::-webkit-scrollbar {
+	display: none;
+}
+
+section {
+	width: 100%;
+	min-block-size: 100px;
+	scroll-snap-align: start;
+	scroll-padding: 15%;
+	overflow: hidden;
+}

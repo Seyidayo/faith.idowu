@@ -1,0 +1,25 @@
+.ruler {
+	width: var(--border-size);
+	border: var(--border-size) dashed var(--bg-alt-color);
+	margin: var(--min-padding) auto;
+	height: 50px;
+}
+
+section {
+	&:first-of-type {
+		
+	}
+}
+
+footer ul {
+	margin: var(--max-padding) 0;
+	@media (min-width: $tablet) {
+		display: inline-flex;
+	}
+	li {
+		margin: var(--min-padding);
+	}
+	@supports (flex-gap: 10px) {
+		gap: var(--max-padding);
+	}
+}

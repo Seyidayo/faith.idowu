@@ -1,0 +1,92 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+@font-face {
+	font-family: "Soleil";
+	src: local("Soleil"), url(../fonts/Soleil-Regular.woff);
+	font-weight: 400;
+	font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Sacramento", cursive;
+	font-style: normal;
+	font-weight: normal;
+}
+
+body {
+	font-family: "Soleil", sans-serif;
+}
+
+h1 {
+	width: 428px;
+	font-size: 3.5em;
+	line-height: 137.95%;
+	text-align: center;
+	letter-spacing: -0.02em;
+}
+
+h2 {
+	font-size: 2.5em;
+	margin-block-end: 40px;
+}
+
+.grid h5 {
+	font-size: 1.5em;
+}
+
+p {
+	font-style: normal;
+	font-weight: normal;
+	&.description {
+		width: 90%;
+		margin: 0 auto;
+		margin-block-end: 15px;
+		font-size: 18px;
+		line-height: 139.95%;
+		letter-spacing: -0.02em;
+		text-align: center;
+		p {
+			margin-block-end: 90px;
+		}
+
+		@media (min-width: $tablet) {
+			width: 70%;
+		}
+
+		@media (min-width: $laptop) {
+			width: 50%;
+		}
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: var(--border-size) solid var(--bg-alt-color);
+	padding: 2px;
+	transition: background-color 0.3s, border-color 0.3s;
+	&:hover,
+	&:focus {
+		border-color: transparent;
+		background-color: var(--hover-bg-color);
+	}
+}
+
+big {
+	top: 0;
+	left: 0;
+	font-size: 5em;
+	position: absolute;
+	color: var(--bg-color);
+	-webkit-text-stroke: 1.5px var(--bg-alt-color);
+}
