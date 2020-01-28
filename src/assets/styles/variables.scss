@@ -2,15 +2,16 @@ $tablet: 700px;
 $laptop: 1024px;
 
 :root {
-	--bg-color: rgb(255, 255, 255);;
-	--bg-alt-color: rgb(0, 0, 0);;
-	--hover-bg-color: rgb(0, 255, 255);;
-	--min-padding: 15px;
-	--max-padding: 30px;
+	--bg-color: #011320;
+	--bg-alt-color: rgb(255, 255, 255);
+	--hover-bg-color: rgb(255, 255, 255);
+	--min-padding: 0.7rem;
+	--max-padding: 2rem;
 	--border-size: 1.5px;
-	--border-color: rgb(0, 0, 0);;
+	--border-color: rgb(0, 0, 0);
 	--border-radius: 0;
 	--box-shadow: 3px 3px 2px 4px rgba(0, 0, 0, 0.2);
+	--header-font: "Bitter";
 
 	[data-theme="dark"] {
 		--bg-color: #011320;

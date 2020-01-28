@@ -1,18 +1,26 @@
 <template>
   <Layout>
-    <home-hey />
-    <home-about />
-    <home-what />
-    <home-me />
-    <Footer />
+    <LazyHydrate when-idle>
+      <home-hey />
+    </LazyHydrate>
+    <LazyHydrate>
+      <home-about />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <home-what />
+    </LazyHydrate>
+    <LazyHydrate>
+      <home-me />
+    </LazyHydrate>
+    <LazyHydrate>
+      <Footer />
+    </LazyHydrate>
   </Layout>
 </template>
 
 <script>
+import LazyHydrate from "vue-lazy-hydration";
 import HomeHey from "~/components/home/HomeHey";
-import HomeAbout from "~/components/home/HomeAbout";
-import HomeWhat from "~/components/home/HomeWhat";
-import HomeMe from "~/components/home/HomeMe";
 import Footer from "~/layouts/partials/Footer";
 export default {
   metaInfo: {
@@ -20,10 +28,11 @@ export default {
   },
   components: {
     HomeHey,
-    HomeAbout,
-    HomeWhat,
-    HomeMe,
-    Footer
+    HomeAbout: () => import("~/components/home/HomeAbout"),
+    HomeWhat: () => import("~/components/home/HomeWhat"),
+    HomeMe: () => import("~/components/home/HomeMe"),
+    Footer,
+    LazyHydrate
   }
 };
 </script>

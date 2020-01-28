@@ -1,14 +1,14 @@
 .ruler {
-	width: var(--border-size);
-	border: var(--border-size) dashed var(--bg-alt-color);
-	margin: var(--min-padding) auto;
-	height: 50px;
+	block-size: 100px;
+	inline-size: 5px;
+	background: url(../images/bank-note.svg);
+	margin: var(--max-padding) auto;
 }
 
-section {
-	&:first-of-type {
-		
-	}
+.pattern-bg {
+	margin-block-start: 1.5rem;
+	background: url(../images/diagonal-stripes.svg);
+	height: 200px;
 }
 
 footer ul {

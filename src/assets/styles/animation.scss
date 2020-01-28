@@ -1,0 +1,14 @@
+@keyframes reveal {
+	from {
+		transform: translateY(-70px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.animation-reveal {
+	animation: reveal 1.5s;
+}

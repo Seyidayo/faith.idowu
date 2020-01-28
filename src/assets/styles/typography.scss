@@ -3,7 +3,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bitter&display=swap");
 
 @font-face {
 	font-family: "Soleil";
@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Sacramento", cursive;
+	font-family: var(--header-font), cursive;
 	font-style: normal;
 	font-weight: normal;
 }
@@ -28,15 +28,20 @@ body {
 }
 
 h1 {
-	width: 428px;
-	font-size: 3.5em;
+	font-size: 3em;
+	@media (min-width: $laptop) {
+		font-size: 4.5em;
+	}
 	line-height: 137.95%;
-	text-align: center;
-	letter-spacing: -0.02em;
+	letter-spacing: 0.05rem;
+	padding-block-end: 1rem;
 }
 
 h2 {
-	font-size: 2.5em;
+	font-size: 1.75em;
+	@media (min-width: $laptop) {
+		font-size: 2.5em;
+	}
 	margin-block-end: 40px;
 }
 
@@ -48,23 +53,11 @@ p {
 	font-style: normal;
 	font-weight: normal;
 	&.description {
-		width: 90%;
-		margin: 0 auto;
 		margin-block-end: 15px;
-		font-size: 18px;
-		line-height: 139.95%;
-		letter-spacing: -0.02em;
-		text-align: center;
-		p {
-			margin-block-end: 90px;
-		}
-
+		font-size: 1.3rem;
+		line-height: 159.95%;
 		@media (min-width: $tablet) {
-			width: 70%;
-		}
-
-		@media (min-width: $laptop) {
-			width: 50%;
+			inline-size: 70%;
 		}
 	}
 }
@@ -73,12 +66,13 @@ a {
 	color: inherit;
 	text-decoration: none;
 	border-bottom: var(--border-size) solid var(--bg-alt-color);
-	padding: 2px;
+	padding: 2px 0;
 	transition: background-color 0.3s, border-color 0.3s;
 	&:hover,
 	&:focus {
 		border-color: transparent;
 		background-color: var(--hover-bg-color);
+		color: var(--bg-color);
 	}
 }
 

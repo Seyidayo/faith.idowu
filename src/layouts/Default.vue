@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <navigation-bar />
-    <main class="layout">
-      <slot />
-    </main>
-  </div>
+  <main class="layout">
+    <!-- <navigation-bar /> -->
+    <slot />
+  </main>
 </template>
 
 <script>
