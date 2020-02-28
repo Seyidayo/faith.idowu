@@ -3,9 +3,6 @@
     <LazyHydrate when-idle>
       <home-hey />
     </LazyHydrate>
-    <LazyHydrate>
-      <home-about />
-    </LazyHydrate>
     <LazyHydrate when-visible>
       <home-what />
     </LazyHydrate>
@@ -24,11 +21,10 @@ import HomeHey from "~/components/home/HomeHey";
 import Footer from "~/layouts/partials/Footer";
 export default {
   metaInfo: {
-    title: "Welcome"
+    title: "Portfolio"
   },
   components: {
     HomeHey,
-    HomeAbout: () => import("~/components/home/HomeAbout"),
     HomeWhat: () => import("~/components/home/HomeWhat"),
     HomeMe: () => import("~/components/home/HomeMe"),
     Footer,

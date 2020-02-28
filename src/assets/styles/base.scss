@@ -6,19 +6,19 @@
 
 body {
 	color: var(--bg-alt-color);
+	background-color: var(--bg-alt-color);
 	transition: background-color, color 0.5s;
 	block-size: 100vh;
 	@media (max-width: $tablet) {
 		--min-padding: 10px;
 	}
-	padding: var(--min-padding);
+	padding: 0.5rem;
 	overflow: hidden;
 }
 
 main {
 	block-size: 100%;
 	background-color: var(--bg-color);
-	padding: var(--min-padding);
 	overflow-y: scroll;
 	scrollbar-width: none;
 	&::-webkit-scrollbar {

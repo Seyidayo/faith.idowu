@@ -30,7 +30,7 @@ body {
 h1 {
 	font-size: 3em;
 	@media (min-width: $laptop) {
-		font-size: 4.5em;
+		font-size: 4em;
 	}
 	line-height: 137.95%;
 	letter-spacing: 0.05rem;
@@ -45,6 +45,11 @@ h2 {
 	margin-block-end: 40px;
 }
 
+h1,
+h2 {
+	color: var(--bg-color);
+	-webkit-text-stroke: 2.5px var(--bg-alt-color);
+}
 .grid h5 {
 	font-size: 1.5em;
 }
@@ -55,10 +60,11 @@ p {
 	&.description {
 		margin-block-end: 15px;
 		font-size: 1.3rem;
-		line-height: 159.95%;
-		@media (min-width: $tablet) {
-			inline-size: 70%;
-		}
+		line-height: 180.95%;
+		letter-spacing: 0.25px;
+		// @media (min-width: $tablet) {
+		// 	// inline-size: 80%;
+		// }
 	}
 }
 
@@ -66,7 +72,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 	border-bottom: var(--border-size) solid var(--bg-alt-color);
-	padding: 2px 0;
+	padding: 4px;
 	transition: background-color 0.3s, border-color 0.3s;
 	&:hover,
 	&:focus {

@@ -1,64 +1,61 @@
 <template>
-  <section class="container">
+  <section class="container grid">
     <h2>Work</h2>
-    <p
-      class="description"
-    >From design to production, I work with creative minds to build awesome, responsive and accessible web projects, here are some of my personal projects</p>
-    <div class="grid animation-reveal">
-      <div class="grid-item" v-for="work in works" :key="work.no">
-        <!-- <big>{{ work.no }}</big> -->
-        <article>
-          <div class="work">
-            <h5 class="work__title">
-              <b>{{ work.title }}</b>
-            </h5>
-            <p class="work__description">{{ work.description }}</p>
-            <span class="work__link" v-if="work.link">
-              <a :href="work.link.live" v-if="work.link.live">website</a>
-              <a :href="work.link.repository" v-if="work.link.repository">repository</a>
-            </span>
-            <a href="#" class="work__link" title="Work In Progress" v-else>WIP</a>
-            <div class="work__tech">
-              <span class="work__tech--circle" v-for="(tech, index)  in work.tech" :key="index">
-                <img
-                  src="../../assets/images/vuejs.svg"
-                  height="25"
-                  width="25"
-                  v-if="tech === 'V'"
-                  alt="Vue Js"
-                />
-                <img
-                  src="../../assets/images/react.svg"
-                  height="25"
-                  width="25"
-                  v-else-if="tech === 'R'"
-                  alt="React Js"
-                />
-                <img
-                  src="../../assets/images/html-5.svg"
-                  height="25"
-                  width="25"
-                  v-if="tech === 'H'"
-                  alt="HTML"
-                />
-                <img
-                  src="../../assets/images/css3.svg"
-                  height="25"
-                  width="25"
-                  v-else-if="tech === 'C'"
-                  alt="CSS"
-                />
+    <section>
+      <p
+        class="description"
+      >From design to production, I work with creative minds to build awesome, responsive and accessible web projects, here are some of my personal projects</p>
+      <div class="work-grid animation-reveal-bottom">
+        <div class="grid-item" style="position: relative" v-for="work in works" :key="work.no">
+          <!-- <big>{{ work.no }}</big> -->
+          <article>
+            <div class="work">
+              <h5 class="work__title">
+                <b>{{ work.title }}</b>
+              </h5>
+              <p class="work__description">{{ work.description }}</p>
+              <span class="work__link" v-if="work.link">
+                <a :href="work.link.live" v-if="work.link.live">website</a>
+                <a :href="work.link.repository" v-if="work.link.repository">repository</a>
               </span>
+              <a href="#" class="work__link" title="Work In Progress" v-else>WIP</a>
+              <div class="work__tech">
+                <span class="work__tech--circle" v-for="(tech, index)  in work.tech" :key="index">
+                  <img
+                    src="../../assets/images/vuejs.svg"
+                    height="25"
+                    width="25"
+                    v-if="tech === 'V'"
+                    alt="Vue Js"
+                  />
+                  <img
+                    src="../../assets/images/react.svg"
+                    height="25"
+                    width="25"
+                    v-else-if="tech === 'R'"
+                    alt="React Js"
+                  />
+                  <img
+                    src="../../assets/images/html-5.svg"
+                    height="25"
+                    width="25"
+                    v-if="tech === 'H'"
+                    alt="HTML"
+                  />
+                  <img
+                    src="../../assets/images/css3.svg"
+                    height="25"
+                    width="25"
+                    v-else-if="tech === 'C'"
+                    alt="CSS"
+                  />
+                </span>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
-    </div>
-    <p class="description" style="margin: 0 auto; text-align: center">
-      Some of this sites are
-      <a href="https://github.com/seyidayo">public on github</a>, if you'd like
-      to follow along
-    </p>
+    </section>
   </section>
 </template>
 
@@ -78,36 +75,51 @@ export default {
           },
           tech: ["H", "C"]
         },
-        // <a target="_blank" href="https://icons8.com/icons/set/vuejs">Vuejs icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
         {
           no: "02",
-          title: "Sportage shoes",
-          description:
-            "A minimal shoe store done to take a stab at this MERN stack every one is buzzing about",
+          title: "Fuudzie.com",
+          description: "An Ecommerce site to carry out operations",
 
           link: {
-            live: "https://sportage.herokuapp.com",
-            repository:
-              "https://bitbucket.org/FaithIdowu/sportage-fe/src/master/"
+            live: "https://fuudzie.com"
           },
           tech: ["R"]
         },
         {
           no: "03",
-          title: "Zoropay",
-          description:
-            "Zoropay helps students pay their school fees by offering a fair loan and payback system",
-          link: { live: "https://zoropay.ng" },
-          tech: ["R"]
-        },
-        {
-          no: "04",
-          title: "Breaking Bad",
-          description:
-            "Zoropay helps students pay their school fees by offering a fair loan and payback system",
-
-          tech: ["V"]
+          title: "Github Repository",
+          description: "Finding time to learn more technologies and projects",
+          link: { live: "https://github.com/seyidayo" }
         }
+        // ,{
+        //   no: "03",
+        //   title: "Sportage shoes",
+        //   description:
+        //     "A minimal shoe store done to take a stab at this MERN stack every one is buzzing about",
+
+        //   link: {
+        //     live: "https://sportage.herokuapp.com",
+        //     repository:
+        //       "https://bitbucket.org/FaithIdowu/sportage-fe/src/master/"
+        //   },
+        //   tech: ["R"]
+        // },
+        // {
+        //   no: "03",
+        //   title: "Zoropay",
+        //   description:
+        //     "Zoropay helps students pay their school fees by offering a fair loan and payback system",
+        //   link: { live: "https://zoropay.ng" },
+        //   tech: ["R"]
+        // },
+        // {
+        //   no: "05",
+        //   title: "Breaking Bad",
+        //   description:
+        //     "Zoropay helps students pay their school fees by offering a fair loan and payback system",
+
+        //   tech: ["V"]
+        // }
       ]
     };
   }
