@@ -19,10 +19,10 @@
         <b>front-end technologies</b>
         (HTML, CSS and JS).
       </p>
-      <p style="display: flex; flex-direction: row;">
+      <!--<p style="display: flex; flex-direction: row;">
         <a href="https://app.pluralsight.com/profile/FaithIdowu">Expert in HTML5 and CSS3</a>
         <img src="../../assets/images/pluralsight.png" height="auto" width="160px" alt />
-      </p>
+      </p>-->
     </header>
   </header>
 </template>
